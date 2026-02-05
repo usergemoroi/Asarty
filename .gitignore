@@ -12,7 +12,6 @@ cmake-build-*/
 
 # Compiled files
 *.o
-*.so
 *.a
 *.lib
 *.exe

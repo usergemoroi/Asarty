@@ -3,6 +3,8 @@
 #include "Aimbot.h"
 #include "Config.h"
 #include <string>
+#include <android/log.h>
+#include <cstdio>
 
 GUI* g_GUI = nullptr;
 

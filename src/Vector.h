@@ -2,6 +2,7 @@
 #define VECTOR_H
 
 #include <cmath>
+#include <cstdint>
 
 struct Vector2 {
     float x, y;

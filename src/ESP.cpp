@@ -2,6 +2,8 @@
 #include "Game.h"
 #include "Drawing.h"
 #include <cmath>
+#include <android/log.h>
+#include <cstdio>
 
 ESP* g_ESP = nullptr;
 
