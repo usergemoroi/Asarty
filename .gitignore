@@ -1,0 +1,32 @@
+# Build directories
+build/
+cmake-build-*/
+.cmake/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Compiled files
+*.o
+*.so
+*.a
+*.lib
+*.exe
+*.out
+
+# Android specific
+*.apk
+*.ap_
+*.dex
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Original binary (keep for reference)
+# libx.so
