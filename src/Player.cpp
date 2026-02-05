@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <cstdint>
 
 Player::Player(uintptr_t addr) : instance(addr) {
     // Constructor
