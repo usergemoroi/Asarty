@@ -22,22 +22,21 @@ include_directories(
 set(SOURCES
     src/ESP.cpp
     src/GUI.cpp
-    # Add other .cpp files here when implemented
-    # src/Player.cpp
-    # src/Game.cpp
-    # src/Drawing.cpp
-    # src/Aimbot.cpp
-    # src/Config.cpp
+    src/Player.cpp
+    src/Game.cpp
+    src/Drawing.cpp
+    src/Aimbot.cpp
+    src/Config.cpp
 )
 
 # ImGui sources (if using ImGui)
 set(IMGUI_SOURCES
-    include/imgui/imgui.cpp
-    include/imgui/imgui_draw.cpp
-    include/imgui/imgui_widgets.cpp
-    include/imgui/imgui_tables.cpp
-    include/imgui/imgui_impl_opengl3.cpp
-    include/imgui/imgui_impl_android.cpp
+    src/imgui.cpp
+    src/imgui_draw.cpp
+    src/imgui_widgets.cpp
+    src/imgui_tables.cpp
+    src/imgui_impl_opengl3.cpp
+    src/imgui_impl_android.cpp
 )
 
 # Create shared library

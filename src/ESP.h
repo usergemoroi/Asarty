@@ -45,7 +45,7 @@ private:
     void DrawSkeleton(Player* player);
     
     bool WorldToScreen(Vector3 worldPos, Vector2* screenPos);
-    void GetBoundingBox(Player* player, Vector2* topLeft, Vector2* bottomRight);
+    bool GetBoundingBox(Player* player, Vector2* topLeft, Vector2* bottomRight);
     
 public:
     ESP();
