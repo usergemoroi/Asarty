@@ -1,3 +1,4 @@
+#include <cstdint>
 #ifndef AIMBOT_H
 #define AIMBOT_H
 

@@ -1,3 +1,4 @@
+#include <cstdint>
 #ifndef GAME_H
 #define GAME_H
 

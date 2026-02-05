@@ -1,4 +1,5 @@
 #include "Game.h"
+#include <cstdint>
 
 namespace Game {
     namespace Offsets {
@@ -32,7 +33,7 @@ namespace Game {
     }
 
     Player* GetLocalPlayer() {
-        static Player localPlayer(0);
+        static Player localPlayer(static_cast<uintptr_t>(0));
         return &localPlayer;
     }
 
