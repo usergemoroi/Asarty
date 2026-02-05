@@ -7,13 +7,14 @@
 // Forward declarations
 class Transform;
 class GameObject;
+class Weapon;
 
 class Player {
 private:
     uintptr_t instance;
     
 public:
-    Player(uintptr_t addr) : instance(addr) {}
+    Player(uintptr_t addr);
     
     bool IsValid() const;
     bool IsDead() const;
@@ -28,7 +29,7 @@ public:
     Vector3 GetRotation() const;
     Vector3 GetBonePosition(int boneIndex) const;
     
-    class Weapon* GetCurrentWeapon() const;
+    Weapon* GetCurrentWeapon() const;
     Transform* GetTransform() const;
 };
 
@@ -37,7 +38,7 @@ private:
     uintptr_t instance;
     
 public:
-    Weapon(uintptr_t addr) : instance(addr) {}
+    Weapon(uintptr_t addr);
     
     bool IsValid() const;
     const char* GetName() const;
@@ -51,7 +52,7 @@ private:
     uintptr_t instance;
     
 public:
-    Grenade(uintptr_t addr) : instance(addr) {}
+    Grenade(uintptr_t addr);
     
     bool IsValid() const;
     Vector3 GetPosition() const;

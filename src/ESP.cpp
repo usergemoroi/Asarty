@@ -278,13 +278,14 @@ bool ESP::WorldToScreen(Vector3 worldPos, Vector2* screenPos) {
     return Game::WorldToScreen(worldPos, screenPos);
 }
 
-void ESP::GetBoundingBox(Player* player, Vector2* topLeft, Vector2* bottomRight) {
+bool ESP::GetBoundingBox(Player* player, Vector2* topLeft, Vector2* bottomRight) {
     Vector3 head = player->GetBonePosition(0);  // Head
     Vector3 feet = player->GetPosition();
     
     Vector2 headScreen, feetScreen;
-    WorldToScreen(head, &headScreen);
-    WorldToScreen(feet, &feetScreen);
+    if (!WorldToScreen(head, &headScreen) || !WorldToScreen(feet, &feetScreen)) {
+        return false;
+    }
     
     float height = abs(feetScreen.y - headScreen.y);
     float width = height * 0.4f;
@@ -294,6 +295,8 @@ void ESP::GetBoundingBox(Player* player, Vector2* topLeft, Vector2* bottomRight)
     
     bottomRight->x = headScreen.x + width / 2.0f;
     bottomRight->y = feetScreen.y;
+    
+    return true;
 }
 
 void ESP::SetConfig(ESPConfig newConfig) {
